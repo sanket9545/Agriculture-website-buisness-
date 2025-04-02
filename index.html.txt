@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            max-height: 400px;
+        }
+        .contact, .section {
+            margin: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>Agriculture & Fresh Vegetables</header><nav>
+    <a href="#products">Products</a>
+    <a href="#projects">Projects</a>
+    <a href="#customers">Customers</a>
+    <a href="#career">Career</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="slideshow-container">
+    <img class="slides" src="https://via.placeholder.com/800x400?text=Fresh+Tomatoes" alt="Tomatoes">
+    <img class="slides" src="https://via.placeholder.com/800x400?text=Organic+Carrots" alt="Carrots">
+    <img class="slides" src="https://via.placeholder.com/800x400?text=Green+Spinach" alt="Spinach">
+</div>
+
+<div id="products" class="section">
+    <h2>Our Products</h2>
+    <p>We provide fresh organic vegetables and fruits directly from farms.</p>
+</div>
+
+<div id="projects" class="section">
+    <h2>Our Projects</h2>
+    <p>We are involved in sustainable farming projects to promote eco-friendly agriculture.</p>
+</div>
+
+<div id="customers" class="section">
+    <h2>Our Customers</h2>
+    <p>We serve local markets, supermarkets, and direct consumers with quality produce.</p>
+</div>
+
+<div id="career" class="section">
+    <h2>Career Opportunities</h2>
+    <p>Join our team to contribute to sustainable agriculture and innovative farming solutions.</p>
+</div>
+
+<div id="contact" class="contact">
+    <p>Contact Us: <strong>+91 8010139545</strong></p>
+</div>
+
+<script>
+    let index = 0;
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        index++;
+        if (index > slides.length) { index = 1; }
+        slides[index - 1].style.display = "block";
+        setTimeout(showSlides, 2000);
+    }
+    showSlides();
+</script>
+
+</body>
+</html>
