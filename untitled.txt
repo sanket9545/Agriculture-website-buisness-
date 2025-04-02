@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Agriculture & Fresh Products
+    </header><div class="slideshow-container">
+    <img class="slides active" src="https://via.placeholder.com/800x400" alt="Fruit">
+    <img class="slides" src="https://via.placeholder.com/800x400" alt="Vegetables">
+    <img class="slides" src="https://via.placeholder.com/800x400" alt="Farm">
+</div>
+
+<div class="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +918010139545</p>
+</div>
+
+<script>
+    let index = 0;
+    function showSlides() {
+        let slides = document.querySelectorAll(".slides");
+        slides.forEach(slide => slide.classList.remove("active"));
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+        setTimeout(showSlides, 3000);
+    }
+    showSlides();
+</script>
+
+</body>
+</html>
